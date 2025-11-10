@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+# 🚀 CodeField - Real-time Collaborative Code Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="https://img.shields.io/badge/React-17.0.2-blue?style=for-the-badge&logo=react" alt="React">
+  <img src="https://img.shields.io/badge/Socket.io-4.4.1-green?style=for-the-badge&logo=socket.io" alt="Socket.io">
+  <img src="https://img.shields.io/badge/Node.js-Express-yellow?style=for-the-badge&logo=node.js" alt="Node.js">
+  <img src="https://img.shields.io/badge/CodeMirror-5.65.2-orange?style=for-the-badge" alt="CodeMirror">
+</div>
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+## 📝 About
 
-### `npm start`
+**CodeField** is a real-time collaborative code editor that allows multiple developers to code together in the same virtual room. Built with React, Socket.IO, and CodeMirror, it provides a seamless coding experience with live synchronization across all connected users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔄 **Real-time Collaboration** - Multiple users can edit code simultaneously
+- 🎨 **Syntax Highlighting** - Support for multiple programming languages (JavaScript, Python, C++, Java, PHP, SQL, HTML, CSS, and more)
+- 🌙 **Dracula Theme** - Beautiful dark theme for comfortable coding
+- 👥 **User Presence** - See who's connected in real-time
+- 🔗 **Room-based Sessions** - Create or join coding rooms with unique IDs
+- 📋 **Copy Room ID** - Easy sharing with one-click copy
+- 🔌 **WebSocket Connection** - Fast and reliable real-time updates
+- 💡 **Auto-complete Features** - Automatic bracket and tag closing
 
-### `npm test`
+## 🖼️ Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![CodeField Demo](./screenshot.png)
 
-### `npm run build`
+*Real-time collaborative coding with syntax highlighting*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React.js, React Router, CodeMirror
+- **Backend**: Node.js, Express.js, Socket.IO
+- **Styling**: CSS3
+- **Other**: React Hot Toast for notifications, React Avatar for user avatars
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js (v14 or higher)
+- npm or yarn
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AdityaRanjanJha/CodeField.git
+   cd CodeField
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Create environment file**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   REACT_APP_BACKEND_URL=http://localhost:5001
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Development Mode
 
-### Code Splitting
+1. **Start the backend server** (in one terminal)
+   ```bash
+   PORT=5001 npm run server:dev
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Start the React frontend** (in another terminal)
+   ```bash
+   npm run start:front
+   ```
 
-### Analyzing the Bundle Size
+3. **Open your browser**
+   
+   Navigate to `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Production Mode
 
-### Making a Progressive Web App
+1. **Build the React app**
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Start the production server**
+   ```bash
+   npm start
+   ```
 
-### Advanced Configuration
+## 📖 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Enter your username** on the home page
+2. **Create a new room** by generating a room ID or **join an existing room** by entering a room ID
+3. **Click "Join"** to enter the collaborative coding session
+4. **Start coding!** Your changes will be synchronized in real-time with all connected users
+5. **Share the Room ID** with others using the "Copy ROOM ID" button
+6. **Leave** the room anytime by clicking the "Leave" button
 
-### Deployment
+## 🎯 Supported Languages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The editor provides syntax highlighting for:
+- JavaScript / TypeScript
+- Python
+- C / C++ / Java
+- PHP
+- SQL
+- HTML / XML
+- CSS
+- And many more!
 
-### `npm run build` fails to minify
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+CodeField/
+├── public/              # Public assets
+├── src/
+│   ├── components/      # React components
+│   │   ├── Client.js    # Connected user component
+│   │   └── Editor.js    # CodeMirror editor component
+│   ├── pages/          # Page components
+│   │   ├── home.js     # Landing page
+│   │   └── editorpage.js # Editor room page
+│   ├── Actions.js      # Socket event constants
+│   ├── socket.js       # Socket.IO client setup
+│   └── App.js          # Main app component
+├── server.js           # Express + Socket.IO server
+└── package.json        # Dependencies
+```
+
+## 🔧 Available Scripts
+
+- `npm run start:front` - Start React development server
+- `npm run server:dev` - Start backend server with nodemon
+- `npm start` - Build and start production server
+- `npm run build` - Build React app for production
+- `npm test` - Run tests
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+**Aditya Ranjan Jha**
+
+---
+
+<div align="center">
+  Made with ❤️ by Aditya Ranjan Jha
+</div>

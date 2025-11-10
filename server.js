@@ -6,12 +6,22 @@ const { Server } = require("socket.io");
 const ACTIONS = require("./src/Actions");
 
 const server = http.createServer(app);
-const io = new Server(server);
-
-app.use(express.static("build"));
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
 });
+
+// Only serve static files if build directory exists (production mode)
+const buildPath = path.join(__dirname, "build");
+const fs = require("fs");
+if (fs.existsSync(buildPath)) {
+  app.use(express.static("build"));
+  app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+  });
+}
 
 const userSocketMap = {};
 function getAllConnectedClients(roomId) {
